@@ -1,5 +1,4 @@
 #include<iostream>
-#include<graphics.h>
 using namespace std;
 class point {
 public :
@@ -31,16 +30,12 @@ yinc = dy/steps;
 x = x + xinc;
 y = y + yinc;
 cout<<"point is : ("<<x<<","<<y<<")"<<endl;
-putpixel(x,y,RED);
 }
 }
 };
 
 int main() {
 point P1, P2, P3;
-
-int gd = DETECT, gm;
-initgraph (&gd, &gm, NULL);
 
 cout<<"Enter the start pt. coordinate : ";
 P1.accept();
@@ -50,7 +45,6 @@ P2.accept();
 P2.display();
 
 P3.DDALine(P1.x0, P1.y0, P2.x0, P2.y0);
-delay(50000);
 return 0;
 
 }
