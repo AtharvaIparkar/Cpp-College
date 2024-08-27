@@ -18,7 +18,7 @@ public :
 static int count;
 static void display() {
 count++;
-cout<<count<<endl;
+cout<<"Count is : "<<count<<endl;
 }
 studentInfo() {
 name = " ";
@@ -90,6 +90,9 @@ G all;
 all.getdata(s);
 all.displaydata(s);
 s.display();
+int *age = new int(25);
+cout<<"integer age is : "<<*age<<endl;
+delete age;
 
 return 0;
 }
