@@ -93,4 +93,34 @@ Ptemp.y = P.y;
 return (Ptemp);
 };
 
-
+int lineclip :: visibility(coordinate P1, coordinate P2) {
+int i, flag = 0;
+for(i=0; i<4; i++) {
+if((P1.code[i] == P2.code[i]) && (P2.code[i] == 1))
+flag = '0';
+}
+if(flag == 0)
+return(1);
+return(2);
+coordinate lineclip :: resetendpt(coordinate P1, coordinate P2) {
+coordinate temp;
+int x, y, i;
+float m, k;
+if(P1.code[3] == '1')
+x = 150;
+if(P1.code[2] == '1')
+x = 450;
+if((P1.code[3] == '1') || (P1.code[2] == '1')) {
+m = (float)(P2.y - P1.y)/(P2.x - P1.x)
+k = P1.y (m * (x - P1.x));
+temp.y = k;
+temp.x = x;
+for(i=0; i<4; i++) {
+temp.code[i] = P1.code[i];
+if(temp.y < 350 && temp.y > 100)
+return (temp);
+}
+}
+}
+}
+}
