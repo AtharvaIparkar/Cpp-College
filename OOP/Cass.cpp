@@ -48,14 +48,14 @@ if(pagecount <= 0 || title == " " || price == 0) {
 title = " ";
 price = 0;
 pagecount = 0;
+cout<<"The title of book is : "<<title<<endl;
+cout<<"The price of book is : "<<price<<endl;
+cout<<"No. of pages : "<<pagecount<<endl<<endl;
 } else {
 cout<<"The title of book is : "<<title<<endl;
 cout<<"The price of book is : "<<price<<endl;
 cout<<"No. of pages : "<<pagecount<<endl<<endl;
 }
-cout<<"The title of book is : "<<title<<endl;
-cout<<"The price of book is : "<<price<<endl;
-cout<<"No. of pages : "<<pagecount<<endl<<endl;
 }
 
 void tape :: display() {
@@ -63,14 +63,14 @@ if(time <= 0 || title == " " || price == 0) {
 title = " ";
 price = 0;
 time = 0;
-} else {
 cout<<"The title of cassete is : "<<title<<endl;
 cout<<"The price of cassete is : "<<price<<endl;
 cout<<"Time in minutes : "<<time<<" min"<<endl<<endl;
-}
+} else {
 cout<<"The title of cassete is : "<<title<<endl;
 cout<<"The price of cassete is : "<<price<<endl;
 cout<<"Time in minutes : "<<time<<" min"<<endl;
+}
 }
 
 
