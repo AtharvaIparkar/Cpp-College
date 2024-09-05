@@ -230,6 +230,7 @@ if(flag == 0)
 return(1);
 return(2);
 }
+
 coordinate lineclip :: resetendpt (coordinate P1, coordinate P2) {
 coordinate temp;
 int x, y, i;
@@ -246,6 +247,22 @@ temp.x = x;
 for(i=0; i<4; i++) {
 temp.code[i] = P1.code[i];
 if(temp.y < 350 && temp.y > 100)
+return (temp);
+}
+}
+
+if(P1.code[3] == '1')
+y = 100;
+if(P1.code[2] == '1')
+y = 350;
+if((P1.code[3] == '1') || (P1.code[2] == '1')) {
+m = (float)(P2.y - P1.y)/(P2.x - P1.x);
+k = P1.x + (m * (y - P1.y));
+temp.x = k;
+temp.y = y;
+for(i=0; i<4; i++) {
+temp.code[i] = P1.code[i];
+if(temp.x < 450 && temp.x > 150)
 return (temp);
 }
 }
