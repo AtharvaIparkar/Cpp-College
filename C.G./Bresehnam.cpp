@@ -41,3 +41,11 @@ delay(4000);
 return 0;
 }
 
+d_comp_pl_ii_12@d-comp-pl-ii-12:~/S211045_Atharva$ gedit Bresehnem.cpp
+d_comp_pl_ii_12@d-comp-pl-ii-12:~/S211045_Atharva$ g++ Bresehnem.cpp -o b -lgraph
+d_comp_pl_ii_12@d-comp-pl-ii-12:~/S211045_Atharva$ ./b
+[xcb] Unknown sequence number while processing queue
+[xcb] Most likely this is a multi-threaded client and XInitThreads has not been called
+[xcb] Aborting, sorry about that.
+b: ../../src/xcb_io.c:260: poll_for_event: Assertion `!xcb_xlib_threads_sequence_lost' failed.
+
